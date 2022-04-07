@@ -18,4 +18,14 @@
                 exit('Error: Unable to connect to MySQL' . PHP_EOL);
             }
         }
+
+        // Escape data function helps to prevent SQL injection
+        public function escape_data($data) {
+            // trim & ignore slashes
+            $data = trim( stripslashes($data) );
+            // escape_string
+            $data = mysqli_real_escape_string($this->conn, $data);
+            // Return the escaped value.
+            return $data;
+        }
     }
