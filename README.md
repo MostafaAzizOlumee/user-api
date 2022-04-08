@@ -15,10 +15,24 @@
 - username ``azm.naser@gmai.com`` password ``naser123``
 - username ``shagofa.shms@gmail.com`` password ``shagofa123``
 
-#### POST Json Data Format
-`{
-    "first_name": "John",
-    "last_name": "Doe",
-    "username": "john.doe@gmail.com",
-    "password": "whateverpassword"
+#### POST  Request Json Data Format
+`{ <br>
+    <br> "first_name": "John",
+    <br> "last_name": "Doe",
+    <br> "username": "john.doe@gmail.com",
+    <br> "password": "whateverpassword"
 }`
+
+#### PUT Request Json Data Format
+
+`{<br>
+    "id": "7",
+    <br>"updateData": 
+    <br>{
+        <br>"first_name": "Mostafa",
+        <br>"last_name": "Olumee",
+        <br>"role": "admin",
+        <br>"username": "m.olumee@gmail.com",
+        <br>"password": "$2y$10$HWxXEm7ChgEqamMSrnx9jeVMiVgvxYm1vhntbGyEgbREoXyHXVMa6"
+    <br>}
+<br>}`
