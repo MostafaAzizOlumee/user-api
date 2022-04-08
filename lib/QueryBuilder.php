@@ -36,6 +36,28 @@ class QueryBuilder {
         return "INSERT INTO `$tbl` ($cols) VALUES ($vals)";
     }
 
+    public static function update($tbl, $data, $condition) {
+        $output = "UPDATE `$tbl` SET ";
+        $counter = 0;
+        foreach ($data as $col => $val) {
+            $output .= "`$col` = ";
+            if( $data[$col] == "" ):
+                $output .= "NULL";
+            else:
+                $output .= "'" . self::escape_data_string($val) . "'";
+            endif;
+            if ($counter < count($data) - 1) {
+                $output .= ", ";
+            }
+            $counter++;
+        }
+
+        if ($condition != '') {
+            $output .= " WHERE $condition";
+        }
+        return $output;
+    }
+
     public static function escape_data_string($data)
     {
         $db = new Database;

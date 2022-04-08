@@ -55,7 +55,7 @@ class User {
              
         return false;
     }
-
+    
     // intializes the $_SESSION super global variable
     public function saveSessionData(){
        
@@ -85,4 +85,14 @@ class User {
         // executing the query
         return mysqli_query($conn, $query);
     }
+
+  // update user data  
+  public function updateUser($conn, $data, $condition) {
+    // Preparing the Update query
+    $query = QueryBuilder::update($this->table, $data, $condition);
+    
+    // executing the query
+    return mysqli_query($conn, $query);
+  }
+  
 }
