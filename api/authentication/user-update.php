@@ -15,9 +15,9 @@ $objDb = new Database;
 $objUser = new User;
 
 // if user is not logged in direct user to login page
-// if( !$objUser->isLoggedIn() ):
-//     header("Location: ../../views/login/index.php"); die;
-// endif;
+if( !$objUser->isLoggedIn() ):
+    header("Location: ../../views/login/index.php"); die;
+endif;
 
 // Receive posted data
 $data = json_decode( file_get_contents("php://input"), true );
