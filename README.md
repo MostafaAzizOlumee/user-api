@@ -16,23 +16,23 @@
 - username ``shagofa.shms@gmail.com`` password ``shagofa123``
 
 #### POST  Request Json Data Format
-`{ <br>
-    <br> "first_name": "John",
-    <br> "last_name": "Doe",
-    <br> "username": "john.doe@gmail.com",
-    <br> "password": "whateverpassword"
-}`
+`{  
+    "first_name": "John",  
+    "last_name": "Doe",  
+    "username": "john.doe@gmail.com",  
+    "password": "whateverpassword"  
+}`  
 
 #### PUT Request Json Data Format
 
-`{<br>
-    "id": "7",
-    <br>"updateData": 
-    <br>{
-        <br>"first_name": "Mostafa",
-        <br>"last_name": "Olumee",
-        <br>"role": "admin",
-        <br>"username": "m.olumee@gmail.com",
-        <br>"password": "$2y$10$HWxXEm7ChgEqamMSrnx9jeVMiVgvxYm1vhntbGyEgbREoXyHXVMa6"
-    <br>}
-<br>}`
+`{   
+    "id": "7",  
+    "updateData":   
+    {  
+        "first_name": "Mostafa",  
+        "last_name": "Olumee",  
+        "role": "admin",  
+        "username": "m.olumee@gmail.com",  
+        "password": "$2y$10$HWxXEm7ChgEqamMSrnx9jeVMiVgvxYm1vhntbGyEgbREoXyHXVMa6"  
+    }  
+}`  
