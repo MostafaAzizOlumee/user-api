@@ -95,4 +95,13 @@ class User {
     return mysqli_query($conn, $query);
   }
   
+  // delete user  
+  public function deleteUser($conn, $condition) {
+    // Preparing the Update query
+    $query = QueryBuilder::delete($this->table, $condition);
+    
+    // executing the query
+    return mysqli_query($conn, $query);
+  }
+  
 }
