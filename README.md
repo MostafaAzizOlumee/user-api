@@ -4,9 +4,10 @@
 
 - Clone or download the project
 - import the db from the ```db``` folder
-- Navigate to the ```http://{Your Domain Name}/authentication/views/login/```
+- Navigate to the ```http://{Your Domain Name}/authentication/views/login/``` for login
 - Enter any of the following user credentials
-
+- Navigate to the ```http://{Your Domain Name}/authentication/api/authentication/user-single.php?id={user-id}``` for get request
+- Post the user json-data to the ```http://{Your Domain Name}/authentication/user_create.php``` for user account creation
 #### User Credentials for the API
 
 - username ``koroush.s@gmail.com`` password ``koroush123``

@@ -33,11 +33,12 @@ class User {
             $this->role = $role;
             
             return true;
-        } else {
-            return false;
-        } 
+        }
+            
+        return false; 
     }
-    
+
+    // User login function
     public function login($db, $username, $password){
         // fetch and clean submitted data
         $username = ( isset($username) && !empty($username) ) ? $db->escape_data($username) : '';
@@ -49,14 +50,13 @@ class User {
             // verifing password 
             if( $result && password_verify($password, $this->password) ){
                 return true;
-            }else{
-                return false;
             }
-        else:
-            return false;
         endif;
+             
+        return false;
     }
 
+    // intializes the $_SESSION super global variable
     public function saveSessionData(){
        
         $_SESSION['id'] = $this->id;
@@ -68,11 +68,21 @@ class User {
     
     }
     
+    // Checks if user is logged in
     public function isLoggedIn(){
         if( isset($_SESSION['id']) ){
             return true;
-        }else{
-            return false;
         }
+         
+        return false;
+    }
+
+    // Create User Account function
+    public function createUserAccount($conn, $data){
+        // Preparing the INSERT query
+        $query = QueryBuilder::insert($this->table, $data);
+
+        // executing the query
+        return mysqli_query($conn, $query);
     }
 }
