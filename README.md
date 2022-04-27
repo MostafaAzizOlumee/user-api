@@ -8,6 +8,7 @@
 - Do not forget to change the request method accordingly (POST request, DELETE request,...)
 
 #### POST  Request For Product-Category Add Json Data Format
+##URL: ```http://{Your Domain Name}/temis/api/product/product-category-add.php```
 `{
     "category_name":"Category 1",
     "category_code":"PC1"
