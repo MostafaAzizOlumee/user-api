@@ -16,7 +16,9 @@
 }`  
 
 #### POST  Request For Product Add Json Data Format
-`{
+**URL**: ```http://{Your Domain Name}/temis/api/product/product-add.php```
+
+**Format**: `{
     "generic_name": "Product 1",
     "company_name": "Company 1",
     "min_in_stock_alert": 5,
@@ -26,8 +28,9 @@
 }`  
 
 #### PUT Request For Product-Category Update Json Data Format
+**URL**: ```http://{Your Domain Name}/temis/api/product/product-category-update.php```
 
-`{
+**Format**: `{
     "id":1,
     "updateData":{
         "name": "Product Category 1",
@@ -36,8 +39,9 @@
 }`  
 
 #### PUT Request For Product Update Json Data Format
+**URL**: ```http://{Your Domain Name}/temis/api/product/product-update.php```
 
-`{
+**Format**: `{
     "id":1,
     "updateData":{
         "name": "Product Category 1",
@@ -46,13 +50,15 @@
 }`  
 
 #### Delete Request For Product Delete Json Data Format
+**URL**: ```http://{Your Domain Name}/temis/api/product/product-delete.php```
 
-`{
+**Format**: `{
     "id": 1
 }`  
 
 #### Delete Request For Product-Category Delete Json Data Format
+**URL**: ```http://{Your Domain Name}/temis/api/product/product-category-delete.php```
 
-`{
+**Format**: `{
     "id": 1
 }`  
